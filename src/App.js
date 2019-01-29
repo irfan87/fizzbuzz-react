@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 
 class App extends Component {
+  
+  getFizzBuzz() {
+    for(let i = 0; i < 101; i++) {
+      if(i % 15 === 0) {
+        console.log("FizzBuzz");
+      } else if(i % 3 === 0) {
+        console.log("Fizz");
+      } else if(i % 5 === 0) {
+        console.log("Buzz");
+      } else {
+        console.log(i);
+      }
+    }
+  }
+  
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <h1>Welcome to FizzBuzz Challenge!</h1>
+        <button onClick={this.getFizzBuzz}>Result</button>
       </div>
     );
   }
